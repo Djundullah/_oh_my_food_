@@ -58,7 +58,7 @@ header .logo {
   transition: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2705882353);
   border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   font-weight: 400;
   font-weight: 400;
 }
