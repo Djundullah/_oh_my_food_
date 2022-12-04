@@ -1,0 +1,138 @@
+@import "style.scss";
+
+.background__image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+a {
+    .arrow__return {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 2rem;
+        width: 2rem;
+        height: 2rem;
+        color: #000;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 30%;
+    }
+}
+
+.menu {
+    @include padding-page;  
+        margin-top: -3.5rem;
+        border-radius: 2rem 2rem 0 0;
+        background: #ebebeb;
+        position: relative;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem 0 1rem;
+            
+
+            h2 {
+                font-family: "Shrikhand";
+                margin: 1rem 0;
+            }
+
+            .card__heart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    font-size: 1.5rem;
+                    position: absolute;
+
+                }
+
+                // opacity 0 pour faire disparaître le heart
+                .heart__color {
+                    opacity: 0;
+
+                    // opacity 1 pour faire l'effet désiré avec le hover
+                    &:hover {
+                        opacity: 1;
+                        background: linear-gradient($primary, $secondary);
+                        transition: 1s;
+                        background-clip: text;
+                        color: transparent;
+                    }
+                }
+            }
+        }
+
+    .menu__card {
+        padding: 0 1rem;
+        display: inline-block;
+        width: 33%;
+        
+        
+
+        h3 {
+            position: relative;
+            padding-bottom: 0.50rem;
+            font-weight: 400;
+            margin: 1.2rem 0;
+
+            // petite barre en dessous des titres
+            &:after {
+                content: "";
+                position: absolute;
+                background: #99e2d0;
+                height: 0.25rem;
+                width: 3.5rem;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        // animation des différents menus
+        .menu__item {
+            display: flex;
+            background: #fff;
+            border-radius: .75rem;
+            padding: 1rem;
+            box-shadow: 0.25rem 0.25rem 1rem #0000001a;
+            margin: 1rem 0;
+            cursor: pointer;
+            
+            
+            &--text {
+                flex: 1;
+                
+            }
+
+            // disposition des prix
+            &--price {
+                font-weight: 700;
+                display: flex;
+                align-items: flex-end;
+                padding: 0.5rem;
+            }
+
+        }
+    }
+
+    // bouton Commander
+    .btn__cards {
+        padding: 3rem 0;
+        display: flex;
+        justify-content: center;
+
+        .btn__buy {
+            @include btn;
+            font-weight: 400;
+
+            &:hover {
+                opacity: 1;
+                box-shadow: 0.25rem 0.25rem 0.50rem #000000c9;
+            }
+        }
+    }
+}

@@ -20,7 +20,6 @@ header {
   padding: 1rem;
   box-shadow: 0px 2px 5px rgba(39, 38, 38, 0.4);
   position: relative;
-  z-index: 10;
 }
 header .logo {
   text-align: center;
@@ -31,7 +30,7 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e2e2e2;
+  background-color: #eeeded;
   font-size: 1.2rem;
   padding: 1.2rem;
 }
@@ -44,7 +43,7 @@ header .logo {
 .content .info {
   padding: 1.5rem 1rem 3rem 1rem;
   text-align: center;
-  background: #e8e8e8;
+  background: #f8f8f8;
 }
 .content .info .info__text {
   font-weight: 300;
@@ -80,12 +79,29 @@ header .logo {
 }
 .content .function .container li:hover {
   opacity: 0.8;
-  background-color: rgb(246, 200, 248);
+  background-color: #E6E6FA;
   transition: all 0.5s;
 }
-.content .function .container i {
+.content .function .container li i {
   margin-right: 2rem;
   color: #7e7e7e;
+}
+.content .function .container li i:hover {
+  color: #9356DC;
+}
+.content .function .container li::before {
+  counter-increment: li;
+  content: "" counter(li);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -1rem;
 }
 .content .restaurants {
   background: #f6f6f6;
@@ -146,7 +162,7 @@ header .logo {
 }
 .content .restaurants .container .cards .card .card_heart .heart_color:hover {
   opacity: 1;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(to bottom left, #9356DC, #FF79DA);
   transition: all 0.5s;
   background-clip: text;
   -webkit-background-clip: text;
@@ -179,4 +195,25 @@ footer ul li a {
 footer ul li a i {
   width: 1.2rem;
   margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .function .container {
+    width: 75%;
+  }
+  .function .container ul {
+    display: flex;
+  }
+  .function .container ul li {
+    flex: auto;
+  }
+  .restaurants .container {
+    width: 75%;
+  }
+  .restaurants .container .cards {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
