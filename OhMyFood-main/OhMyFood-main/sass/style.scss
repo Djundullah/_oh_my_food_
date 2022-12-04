@@ -18,6 +18,55 @@ body {
     height: 100vh;
 }
 
+
+// opacity de la page avant de voir l'accueil
+.loader {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 100;
+    justify-content: center;
+    animation: loader 1s;
+    animation-delay: 2s;
+    }
+
+// animation des lettres
+.loader {
+    &__logo {
+    font-family: 'Shrikhand';
+    font-size: 3rem;
+    animation: LogoAnimate 1.5s;
+    }
+}
+
+
+@keyframes loader {
+
+    from {
+        opacity: 1;
+        z-index: 100;
+    }
+
+    to {
+        opacity: 0;
+        z-index: -100;
+    }
+}
+
+// @keyframes LogoAnimate pour faire tourner les lettres
+@keyframes LogoAnimate {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-1turn);
+    }
+}
+
 // @mixin pour les paddind des différentes sections
 @mixin padding-page {
     padding: 2rem 1rem;

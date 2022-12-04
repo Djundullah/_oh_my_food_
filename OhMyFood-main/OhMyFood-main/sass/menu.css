@@ -274,6 +274,9 @@ a .arrow__return {
           background-clip: text;
   color: transparent;
 }
+.menu .menu-cards {
+  width: 100%;
+}
 .menu .menu__card {
   padding: 0 1rem;
   display: inline-block;
@@ -302,6 +305,12 @@ a .arrow__return {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1019607843);
   margin: 1rem 0;
   cursor: pointer;
+  -webkit-animation: animate 0.9s;
+          animation: animate 0.9s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: calc(var(--animation-order) * 150ms);
+          animation-delay: calc(var(--animation-order) * 150ms);
 }
 .menu .menu__card .menu__item--text {
   flex: 1;
@@ -332,4 +341,44 @@ a .arrow__return {
 .menu .btn__cards .btn__buy:hover {
   opacity: 1;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.7882352941);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .background__image {
+    max-width: 100%;
+    max-height: 30rem;
+  }
+  .menu {
+    width: 100%;
+    margin: auto;
+    background: #eee;
+  }
+  .menu__cards {
+    width: 100%;
+  }
+  .menu__card {
+    display: block !important;
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=menu.css.map */

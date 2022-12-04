@@ -67,6 +67,10 @@ a {
             }
         }
 
+    .menu-cards {
+        width: 100%;
+    }
+
     .menu__card {
         padding: 0 1rem;
         display: inline-block;
@@ -101,7 +105,11 @@ a {
             box-shadow: 0.25rem 0.25rem 1rem #0000001a;
             margin: 1rem 0;
             cursor: pointer;
-            
+            // nom de l'animation et calcul 
+            animation: animate .9s;
+            animation-fill-mode: both;
+            animation-delay: calc(var(--animation-order) * 150ms);
+                        
             
             &--text {
                 flex: 1;
@@ -134,5 +142,45 @@ a {
                 box-shadow: 0.25rem 0.25rem 0.50rem #000000c9;
             }
         }
+    }
+}
+
+// animation des menus à la suite
+// en créant un aggrandissement à 100%
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}    
+
+
+
+@media screen and (max-width: 768px) {
+
+// ajustement de l'image en desktop  
+.background__image {
+    max-width: 100%;
+    max-height: 30rem;
+    }
+
+// réduction de la taille de la carte
+// recentrage et background différent
+.menu {
+    width: 100%;
+    margin: auto;
+    background: #eee;
+    }
+.menu__cards {
+    width: 100%;
+    }
+.menu__card {
+    display: block !important;
+    width: 100% !important;
     }
 }

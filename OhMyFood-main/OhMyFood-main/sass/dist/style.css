@@ -17,31 +17,17 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255);
+  background: white;
   z-index: 100;
   justify-content: center;
-  -webkit-animation: loader 1s;
-          animation: loader 1s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation: loader 1s;
+  animation-delay: 2s;
 }
 
 .loader__logo {
   font-family: "Shrikhand";
   font-size: 3rem;
-  -webkit-animation: LogoAnimate 1.5s;
-          animation: LogoAnimate 1.5s;
-}
-
-@-webkit-keyframes loader {
-  from {
-    opacity: 1;
-    z-index: 100;
-  }
-  to {
-    opacity: 0;
-    z-index: -100;
-  }
+  animation: LogoAnimate 1.5s;
 }
 
 @keyframes loader {
@@ -52,16 +38,6 @@ body {
   to {
     opacity: 0;
     z-index: -100;
-  }
-}
-@-webkit-keyframes LogoAnimate {
-  0% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(-1turn);
   }
 }
 @keyframes LogoAnimate {
@@ -80,7 +56,7 @@ body {
 
 header {
   padding: 1rem;
-  box-shadow: 0px 2px 5px rgba(39, 38, 38, 0.4);
+  box-shadow: 0px 2px 5px #27262666;
   position: relative;
 }
 header .logo {
@@ -117,7 +93,7 @@ header .logo {
   color: #fff;
   cursor: pointer;
   transition: 0.25s;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2705882353);
+  box-shadow: 4px 4px 10px #00000045;
   border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   font-weight: 400;
@@ -125,7 +101,7 @@ header .logo {
 }
 .content .info .btn__explore:hover {
   opacity: 1;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.7882352941);
+  box-shadow: 0.25rem 0.25rem 0.5rem #000000c9;
 }
 .content .function {
   padding: 2rem 1rem;
@@ -137,7 +113,7 @@ header .logo {
   border-radius: 1.25rem;
   display: flex;
   position: relative;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1333333333);
+  box-shadow: 0.25rem 0.25rem 0.5rem #00000022;
 }
 .content .function .container li:hover {
   opacity: 0.8;
@@ -178,14 +154,13 @@ header .logo {
   border-radius: 1rem;
   position: relative;
   margin: 0.5rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.0705882353);
+  box-shadow: 0.25rem 0.25rem 0.5rem #00000012;
 }
 .content .restaurants .container .cards .card img {
   width: 100%;
   height: 14rem;
   border-radius: 1rem 1rem 0 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .content .restaurants .container .cards .card .card_new {
   background: #99e1cf;
@@ -269,13 +244,13 @@ footer ul li a i {
   .function .container ul li {
     flex: auto;
   }
+
   .restaurants .container {
     width: 75%;
   }
   .restaurants .container .cards {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
