@@ -12,6 +12,18 @@ body {
   height: 100vh;
 }
 
+.primary {
+  color: #9356DC;
+}
+
+.secondary {
+  color: #FF79DA;
+}
+
+.tertiaire {
+  color: #99E2D0;
+}
+
 .loader {
   display: flex;
   position: fixed;
@@ -20,19 +32,50 @@ body {
   background: rgb(255, 255, 255);
   z-index: 100;
   justify-content: center;
-  -webkit-animation: loader 1s;
-          animation: loader 1s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  align-items: center;
+  -webkit-animation: loader 1.5s;
+          animation: loader 1.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-
-.loader__logo {
+.loader .loader__logo {
   font-family: "Shrikhand";
   font-size: 3rem;
-  -webkit-animation: LogoAnimate 1.5s;
-          animation: LogoAnimate 1.5s;
+  -webkit-animation: LogoAnimate 3s;
+          animation: LogoAnimate 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes LogoAnimate {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-1turn);
+  }
+}
+
+@keyframes LogoAnimate {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-1turn);
+  }
+}
 @-webkit-keyframes loader {
   from {
     opacity: 1;
@@ -43,7 +86,6 @@ body {
     z-index: -100;
   }
 }
-
 @keyframes loader {
   from {
     opacity: 1;
@@ -54,26 +96,10 @@ body {
     z-index: -100;
   }
 }
-@-webkit-keyframes LogoAnimate {
-  0% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(-1turn);
-  }
+.container {
+  margin: auto;
 }
-@keyframes LogoAnimate {
-  0% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(-1turn);
-  }
-}
+
 .container {
   margin: auto;
 }

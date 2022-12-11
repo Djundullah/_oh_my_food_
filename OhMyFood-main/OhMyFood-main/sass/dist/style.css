@@ -12,6 +12,18 @@ body {
   height: 100vh;
 }
 
+.primary {
+  color: #9356DC;
+}
+
+.secondary {
+  color: #FF79DA;
+}
+
+.tertiaire {
+  color: #99E2D0;
+}
+
 .loader {
   display: flex;
   position: fixed;
@@ -20,16 +32,31 @@ body {
   background: white;
   z-index: 100;
   justify-content: center;
-  animation: loader 1s;
-  animation-delay: 2s;
+  align-items: center;
+  animation: loader 1.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 }
-
-.loader__logo {
+.loader .loader__logo {
   font-family: "Shrikhand";
   font-size: 3rem;
-  animation: LogoAnimate 1.5s;
+  animation: LogoAnimate 3s;
+  animation-fill-mode: forwards;
 }
 
+@keyframes LogoAnimate {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-1turn);
+  }
+}
 @keyframes loader {
   from {
     opacity: 1;
@@ -40,16 +67,10 @@ body {
     z-index: -100;
   }
 }
-@keyframes LogoAnimate {
-  0% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(-1turn);
-  }
+.container {
+  margin: auto;
 }
+
 .container {
   margin: auto;
 }

@@ -18,6 +18,17 @@ body {
     height: 100vh;
 }
 
+.primary {
+    color: $primary;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.tertiaire {
+    color: $tertiaire;
+}
 
 // opacity de la page avant de voir l'accueil
 .loader {
@@ -28,20 +39,41 @@ body {
     background: rgb(255, 255, 255);
     z-index: 100;
     justify-content: center;
-    animation: loader 1s;
-    animation-delay: 2s;
-    }
+    align-items: center;
+    animation: loader 1.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
 
-// animation des lettres
-.loader {
-    &__logo {
-    font-family: 'Shrikhand';
-    font-size: 3rem;
-    animation: LogoAnimate 1.5s;
+    // animation des lettres
+    .loader {
+        &__logo {
+            font-family: 'Shrikhand';
+            font-size: 3rem;
+            animation: LogoAnimate 3s;
+            animation-fill-mode: forwards;
+        }
     }
 }
 
+// @keyframes LogoAnimate pour faire tourner les lettres
+@keyframes LogoAnimate {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+    }
 
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(-1turn);
+    }
+}
+
+// @keyframes loader avec une opacité 0 pour apparaître sans
+// le reste de la page et z-index pour retirer sa priorité
 @keyframes loader {
 
     from {
@@ -55,16 +87,8 @@ body {
     }
 }
 
-// @keyframes LogoAnimate pour faire tourner les lettres
-@keyframes LogoAnimate {
-    0% {
-        opacity: 1;
-        transform: rotate(0);
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(-1turn);
-    }
+.container {
+    margin: auto;
 }
 
 // @mixin pour les paddind des différentes sections

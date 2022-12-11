@@ -68,7 +68,7 @@ a {
         }
 
     .menu-cards {
-        width: 100%;
+        width: 80%;
     }
 
     .menu__card {
@@ -104,6 +104,7 @@ a {
             padding: 1rem;
             box-shadow: 0.25rem 0.25rem 1rem #0000001a;
             margin: 1rem 0;
+            overflow: hidden;
             cursor: pointer;
             // nom de l'animation et calcul 
             animation: animate .9s;
@@ -122,6 +123,48 @@ a {
                 display: flex;
                 align-items: flex-end;
                 padding: 0.5rem;
+            }
+
+            // bouton validation décalé à -5rem
+            &--validation {
+                display: flex;
+                background: #99e2d0;
+                margin: -1rem -5rem -1rem 1rem;
+                width: 5rem;
+                justify-content: center;
+                align-items: center;
+                transition-duration: .5s;
+            }
+
+            // icône validation avec une rotation inversée
+            &--icon {
+                display: flex;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: #fff;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                transition-duration: .5s;
+
+                i {
+                    color: #99e2d0;
+                }
+            }
+
+            &:hover {
+                // décalage du bouton de validation vers la gauche de 1rem
+                .menu__item {
+                    &--validation {
+                        margin-right: -1rem;
+                    }
+
+                    // rotation de l'icône de validation
+                    &--icon {
+                        transform: rotate(1turn);
+                
+                    }    
+                }
             }
 
         }
