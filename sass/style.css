@@ -156,7 +156,11 @@ header .logo {
 .content .function {
   padding: 2rem 1rem;
 }
-.content .function .container li {
+.content .function .container ul {
+  list-style: none;
+  counter-reset: li;
+}
+.content .function .container ul li {
   padding: 1.5rem;
   margin: 1rem 1rem 1rem 1rem;
   background: #f6f6f6;
@@ -165,25 +169,25 @@ header .logo {
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1333333333);
 }
-.content .function .container li:hover {
+.content .function .container ul li:hover {
   opacity: 0.8;
   background-color: #E6E6FA;
   transition: all 0.5s;
-}
-.content .function .container li i {
-  margin-right: 2rem;
-  color: #7e7e7e;
-}
-.content .function .container li i:hover {
   color: #9356DC;
 }
-.content .function .container li::before {
+.content .function .container ul li i {
+  margin-right: 2rem;
+}
+.content .function .container ul li .fonction__text {
+  color: rgb(15, 15, 15);
+}
+.content .function .container ul li::before {
   counter-increment: li;
   content: "" counter(li);
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
-  background-color: #9356DC;
+  background: #9356DC;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,6 +224,7 @@ header .logo {
   position: absolute;
   top: 1rem;
   right: 0.75rem;
+  border-radius: 0.2rem;
 }
 .content .restaurants .container .cards .card .card_info {
   display: flex;
@@ -303,5 +308,13 @@ footer ul li a i {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+  }
+  .footer__text {
+    display: flex;
+    justify-content: center;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
   }
 }/*# sourceMappingURL=style.css.map */

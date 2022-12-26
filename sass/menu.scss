@@ -67,18 +67,20 @@ a {
             }
         }
 
-    .menu-cards {
-        width: 80%;
+    .menu__cards {
+        width: 100%;
+        display: flex;
     }
 
     .menu__card {
         padding: 0 1rem;
         display: inline-block;
-        width: 33%;
+        width: 32.5%;
         
         
 
         h3 {
+            text-transform: uppercase;
             position: relative;
             padding-bottom: 0.50rem;
             font-weight: 400;
@@ -90,7 +92,7 @@ a {
                 position: absolute;
                 background: #99e2d0;
                 height: 0.25rem;
-                width: 3.5rem;
+                width: 3rem;
                 left: 0;
                 bottom: 0;
             }
@@ -114,7 +116,20 @@ a {
             
             &--text {
                 flex: 1;
-                
+                overflow: hidden;
+            
+                h4 {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin-bottom: 0.3rem;
+                }
+            
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
             }
 
             // disposition des prix
@@ -129,7 +144,7 @@ a {
             &--validation {
                 display: flex;
                 background: #99e2d0;
-                margin: -1rem -5rem -1rem 1rem;
+                margin: -1rem -6rem -1rem 1rem;
                 width: 5rem;
                 justify-content: center;
                 align-items: center;
@@ -202,7 +217,14 @@ a {
     }
 }    
 
-
+.footer__text {
+    display: flex;
+    justify-content: center;
+}
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -221,9 +243,18 @@ a {
     }
 .menu__cards {
     width: 100%;
+    display: block !important;
     }
 .menu__card {
     display: block !important;
     width: 100% !important;
+    }
+    
+    footer ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__text {
+        display: block;
     }
 }
