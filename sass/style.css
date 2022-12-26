@@ -179,7 +179,7 @@ header .logo {
   margin-right: 2rem;
 }
 .content .function .container ul li .fonction__text {
-  color: rgb(15, 15, 15);
+  /* color: rgb(15, 15, 15); */
 }
 .content .function .container ul li::before {
   counter-increment: li;
