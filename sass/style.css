@@ -125,8 +125,17 @@ header .logo {
 .content .location .location__icon {
   margin: 0 1rem 0 0;
 }
-.content .location__text {
-  font-weight: 500;
+.content .location__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+.content .input__search {
+  width: 160px;
+  font-size: 1.1rem;
+  border: 2px solid #F2F2F2;
+  background-color: #eeeded;
 }
 .content .info {
   padding: 1.5rem 1rem 3rem 1rem;
@@ -224,7 +233,7 @@ header .logo {
   position: absolute;
   top: 1rem;
   right: 0.75rem;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
 }
 .content .restaurants .container .cards .card .card_info {
   display: flex;
